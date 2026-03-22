@@ -75,7 +75,7 @@ loadMoreBtn.addEventListener('click', async () => {
       showLoadMoreButton(); // 🔹 показуємо знову, якщо ще є сторінки
     }
 
-    smoothScroll(); // 🔹 викликаємо завжди після завантаження
+    smoothScroll(); // 🔹 викликаємо завжди після успішного завантаження
   } catch (error) {
     iziToast.error({ title: 'Error', message: error.message });
   } finally {
