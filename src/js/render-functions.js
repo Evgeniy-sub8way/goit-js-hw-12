@@ -11,9 +11,11 @@ export function createGallery(images) {
   const markup = images
     .map(
       img => `
-      <a href="${img.largeImageURL}">
-        <img src="${img.webformatURL}" alt="${img.tags}" />
-      </a>`
+      <li>
+        <a href="${img.largeImageURL}">
+          <img src="${img.webformatURL}" alt="${img.tags}" />
+        </a>
+      </li>`
     )
     .join('');
   gallery.insertAdjacentHTML('beforeend', markup);
